@@ -1,65 +1,150 @@
-import Image from "next/image";
+import Header from '@/components/Header_Inline_Styles'
+import Hero from '@/components/Hero_Inline_Styles'
+import Experience from '@/components/Experience_Inline_Styles'
+import Projects from '@/components/Projects_Inline_Styles'
+import Skills from '@/components/Skills_Inline_Styles'
+import Contact from '@/components/Contact_Inline_Styles'
+import { Camera, Film, Globe2, Music4, Trophy } from 'lucide-react'
+
+const passions = [
+  { name: 'Travel', icon: Globe2, color: '#0066ff', bg: '#eff6ff' },
+  { name: 'Music', icon: Music4, color: '#7c3aed', bg: '#f5f3ff' },
+  { name: 'Movies', icon: Film, color: '#f97316', bg: '#fff7ed' },
+  { name: 'Photography', icon: Camera, color: '#10b981', bg: '#ecfdf5' },
+  { name: 'Soccer', icon: Trophy, color: '#ef4444', bg: '#fef2f2' },
+]
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main style={{ backgroundColor: '#ffffff' }}>
+      <Header />
+      <Hero />
+
+      <section style={{ padding: '0 24px 56px', backgroundColor: '#ffffff' }}>
+        <div style={{
+          maxWidth: '1120px',
+          margin: '0 auto',
+          borderRadius: '28px',
+          padding: '28px',
+          background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 65%, #334155 100%)',
+          boxShadow: '0 28px 60px rgba(15, 23, 42, 0.16)',
+          color: 'white',
+        }}>
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: '20px',
+            marginBottom: '24px',
+          }}>
+            <div>
+              <p style={{
+                margin: '0 0 8px',
+                fontSize: '12px',
+                letterSpacing: '1.2px',
+                textTransform: 'uppercase',
+                color: '#93c5fd',
+                fontWeight: '700',
+              }}>
+                Beyond Data
+              </p>
+              <h2 style={{
+                margin: 0,
+                fontSize: 'clamp(1.75rem, 3vw, 2.4rem)',
+                color: '#ffffff',
+              }}>
+                The interests that keep my work creative and human.
+              </h2>
+            </div>
+            <p style={{
+              margin: 0,
+              maxWidth: '420px',
+              color: '#cbd5e1',
+              fontSize: '15px',
+              lineHeight: '1.7',
+            }}>
+              I bring the same curiosity I use in analytics to the things I enjoy outside work:
+              exploring places, stories, sound, moments, and team play.
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+            gap: '16px',
+          }}>
+            {passions.map((passion) => {
+              const Icon = passion.icon
+              return (
+                <div
+                  key={passion.name}
+                  style={{
+                    borderRadius: '20px',
+                    padding: '18px 16px',
+                    background: 'rgba(255, 255, 255, 0.07)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    display: 'grid',
+                    gap: '14px',
+                    justifyItems: 'start',
+                  }}
+                >
+                  <div style={{
+                    width: '44px',
+                    height: '44px',
+                    borderRadius: '14px',
+                    backgroundColor: passion.bg,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}>
+                    <Icon size={22} color={passion.color} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '16px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>
+                      {passion.name}
+                    </div>
+                    <div style={{ fontSize: '13px', color: '#cbd5e1', lineHeight: '1.5' }}>
+                      {passion.name === 'Travel' && 'New places, new perspectives.'}
+                      {passion.name === 'Music' && 'Rhythm that keeps ideas flowing.'}
+                      {passion.name === 'Movies' && 'Storytelling and strong narratives.'}
+                      {passion.name === 'Photography' && 'Finding detail in everyday scenes.'}
+                      {passion.name === 'Soccer' && 'Energy, teamwork, and momentum.'}
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      {/* Experience Section - APPEARS ONLY ONCE */}
+      <Experience />
+
+      {/* Projects Section */}
+      <Projects />
+
+      {/* Skills Section */}
+      <Skills />
+
+      {/* Contact Section */}
+      <Contact />
+
+      {/* Footer */}
+      <footer style={{
+        padding: '32px 24px',
+        borderTop: '1px solid #e5e7eb',
+        backgroundColor: '#ffffff',
+        textAlign: 'center',
+      }}>
+        <p style={{
+          fontSize: '14px',
+          color: '#999',
+        }}>
+          © {new Date().getFullYear()} Kanish Godani. Built with Next.js & Tailwind CSS.
+        </p>
+      </footer>
+    </main>
+  )
 }
