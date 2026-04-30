@@ -12,7 +12,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" style={{ padding: '128px 24px', backgroundColor: '#ffffff' }}>
+    <section id="skills" style={{ padding: '96px 24px', backgroundColor: '#ffffff' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         {/* Header */}
         <motion.div
@@ -20,7 +20,7 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          style={{ textAlign: 'center', marginBottom: '80px' }}
+          style={{ textAlign: 'center', marginBottom: '56px' }}
         >
           <span style={{
             display: 'inline-block',

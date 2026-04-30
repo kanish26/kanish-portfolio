@@ -20,7 +20,16 @@ export default function Home() {
       <Header />
       <Hero />
 
-      <section style={{ padding: '0 24px 56px', backgroundColor: '#ffffff' }}>
+      {/* Experience Section - APPEARS ONLY ONCE */}
+      <Experience />
+
+      {/* Projects Section */}
+      <Projects />
+
+      {/* Skills Section */}
+      <Skills />
+
+      <section id="beyond-data" style={{ padding: '0 24px 56px', backgroundColor: '#ffffff' }}>
         <div style={{
           maxWidth: '1120px',
           margin: '0 auto',
@@ -59,7 +68,7 @@ export default function Home() {
             </div>
             <p style={{
               margin: 0,
-              maxWidth: '420px',
+              maxWidth: '760px',
               color: '#cbd5e1',
               fontSize: '15px',
               lineHeight: '1.7',
@@ -118,15 +127,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Experience Section - APPEARS ONLY ONCE */}
-      <Experience />
-
-      {/* Projects Section */}
-      <Projects />
-
-      {/* Skills Section */}
-      <Skills />
 
       {/* Contact Section */}
       <Contact />

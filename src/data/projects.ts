@@ -2,7 +2,6 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  longDescription: string;
   techStack: string[];
   githubUrl: string;
   liveUrl?: string;
@@ -13,48 +12,52 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'rag-project', 
+    title: 'Vibes Recipe - AI Recipe Recommendation App',
+    description: 'Built an AI-powered recipe recommendation app that understands what you\'re in the mood for — not just what ingredients you have. Combines semantic search with LLM generation to surface recipes that actually match the vibe you\'re going for.',
+    techStack: ['Python', 'Sentence-Transformer', 'pgvector', 'FastAPI', 'Groq', 'Cerebras', 'RAG', 'PostgreSQL'],
+    githubUrl: 'https://github.com/kanish26/Recipe-app',
+    liveUrl: 'https://github.com/kanish26',
+    imageUrl: '/images/projects/retail-demand.png',
+    highlights: [
+      'Result: Improved recommendation relevance by 75% while keeping query response under 3 seconds.'
+    ],
+    category: 'engineering'
+  },
+  {
     id: 'electricity-forecasting',
     title: 'U.S. Electricity Generation Efficiency Forecasting',
-    description: 'AWS ML pipeline processing 4.3M+ time-series records with TimeGPT and Prophet',
-    longDescription: 'Built an end-to-end ML pipeline on AWS to forecast state-level electricity efficiency across the United States, achieving 1.96 RMSE.',
-    techStack: ['Python', 'AWS S3', 'AWS SageMaker', 'TimeGPT', 'Prophet', 'Pandas'],
+    description: 'Built a machine learning pipeline to forecast electricity generation efficiency across U.S. states, pulling in millions of time-series records from a government energy API. Trained and deployed forecasting models on AWS to predict state-level efficiency trends with high accuracy.',
+    techStack: ['Python', 'EIA API', 'AWS S3', 'AWS SageMaker', 'TimeGPT', 'Prophet'],
     githubUrl: 'https://github.com/kanishgodani/electricity-forecasting',
     imageUrl: '/images/projects/electricity.png',
     highlights: [
-      'Processed 4.3M+ time-series records from EIA API',
-      'Achieved 1.96 RMSE in forecasting accuracy',
-      'Deployed models using AWS SageMaker'
+      'Result: Achieved a forecast RMSE of 1.96 across state-level efficiency predictions.'
     ],
     category: 'data-science'
   },
   {
     id: 'music-mental-health',
     title: 'Music\'s Impact on Mental Health Analysis',
-    description: 'Exploratory analysis of 10,000+ survey responses using Python and Tableau',
-    longDescription: 'Analyzed and visualized MxMH survey data to understand correlations between music preferences and mental health outcomes.',
-    techStack: ['Python', 'Pandas', 'Tableau', 'Statistical Analysis', 'Data Visualization'],
+    description: 'Explored the relationship between music listening habits and mental health outcomes using MxMH survey data, analyzing how different genres correlate with varying mental health indicators. Translated the findings into visual stories in Tableau that surfaced patterns useful for improving music therapy recommendations.',
+    techStack: ['Tableau', 'Excel', 'Correlation & Regression Analysis', 'Data Visualization'],
     githubUrl: 'https://github.com/kanishgodani/music-mental-health',
     liveUrl: 'https://public.tableau.com/app/profile/kanish.godani',
     imageUrl: '/images/projects/music-health.png',
     highlights: [
-      'Analyzed 10,000+ survey responses',
-      'Reduced data inconsistencies by 40%',
-      'Improved recommendation accuracy by 30%'
+      'Result: Surfaced genre-specific patterns that improved music therapy accuracy by 30%.'
     ],
     category: 'analytics'
   },
   {
     id: 'facility-optimization',
     title: 'Multi-Facility Operations Optimization',
-    description: 'Time-series forecasting and Power BI dashboards for 20 facilities',
-    longDescription: 'Streamlined operations across multiple facilities through data preprocessing, forecasting models, and interactive dashboards.',
-    techStack: ['Power BI', 'Power Query', 'Time-Series Analysis', 'DAX', 'Python'],
+    description: 'Analyzed operational data across multiple facilities to uncover cost inefficiencies and production bottlenecks hiding in the numbers. Built KPI dashboards and trend analysis reports that gave decision-makers a clear picture of where performance was lagging and what to act on.',
+    techStack: ['Power BI', 'Power Query', 'Time-Series Analysis', 'DAX', 'Excel', 'KPI Dashboarding'],
     githubUrl: 'https://github.com/kanishgodani/facility-optimization',
     imageUrl: '/images/projects/facility.png',
     highlights: [
-      'Processed 50,000+ operational records',
-      'Built interactive KPI dashboards',
-      'Boosted production efficiency by 10%'
+      'Result: Identified cost inefficiencies that drove a 10% improvement in production efficiency across 20 facilities.'
     ],
     category: 'analytics'
   }
@@ -62,8 +65,8 @@ export const projects: Project[] = [
 
 export const skills = {
   languages: ['Python', 'SQL', 'R', 'Java', 'C++'],
-  libraries: ['Pandas', 'NumPy', 'Scikit-learn', 'TensorFlow', 'PySpark', 'Matplotlib', 'Seaborn'],
-  tools: ['Power BI', 'Tableau', 'Excel (VBA)', 'Looker Studio', 'Jupyter', 'Git'],
+  libraries: ['Pandas', 'NumPy', 'Scikit-learn', 'TensorFlow', 'PySpark', 'Matplotlib', 'Seaborn', 'PyTorch'],
+  tools: ['Power BI', 'Tableau', 'Excel (VBA)', 'Looker Studio', 'Power Query','Jupyter', 'Git'],
   cloud: ['AWS (S3, Lambda, Redshift, SageMaker)', 'GCP BigQuery', 'Snowflake'],
   databases: ['MySQL', 'PostgreSQL', 'MongoDB']
 };
@@ -75,9 +78,21 @@ export const experience = [
     location: 'New York, NY',
     period: 'Jan 2026 - Present | Jun 2025 - Aug 2025',
     summary:
-      'Automated NIL data collection workflows for more than 5,000 weekly athlete records, built player valuation models with XGBoost that reached 88% accuracy, and developed an end-to-end AWS pipeline that improved dataset quality by 25% while making downstream analysis faster and more reliable for the team.',
-    techStack: ['Python', 'XGBoost', 'AWS', 'Data Pipelines', 'Feature Engineering'],
-    softSkills: ['Stakeholder Communication', 'Problem Solving', 'Prioritization']
+      'Worked on building a data pipeline to clean and validate thousands of NFL and college player records, ensuring the data was reliable enough to build on. Used that foundation to engineer meaningful features that bridge college performance to NFL potential, helping the model understand what actually translates across levels. Built and validated a regression model to predict player contract values, with interpretability layers added so stakeholders could understand not just the predictions, but the reasoning behind them.',
+    techStack: ['Python', 'XGBoost Regressor', 'Pandas', 'NumPy', 'Scikit-learn', 'SHAP'],
+    technicalSkills: ['Data Validation', 'Machine Learning', 'Feature Engineering', 'Predictive Modeling', 'Model Explainability', 'Time-Series Validation', 'Backtesting'],
+    softSkills: ['Critical Reasoning', 'Problem Solving', 'Time Management', 'Algorithmic Thinking']
+  },
+  {
+    title: 'Technical Consultant',
+    company: 'Business Intelligence Group, UIUC',
+    location: 'Champaign, IL',
+    period: 'Aug 2025 - Dec 2025',
+    summary:
+      'Designed an AI-powered in-flight medical triage system that helps cabin crew manage health events autonomously, reducing dependence on ground physicians for low-risk cases. Architected an edge-based solution that classifies patient vitals in real time, with explainability built in so crew can understand and trust the recommendations being made. Balanced technical depth with practical constraints — privacy compliance, connectivity limitations, and crew usability — to deliver a system designed for real-world aviation environments.',
+    techStack: ['CNN', 'Gradient Boosting', 'TensorRT', 'AES-256', 'REST APIs'],
+    technicalSkills: ['AI System Design', 'Explainable AI', 'Data Privacy', 'Risk Assessment'],
+    softSkills: ['Technical Documentation', 'Descision Making', 'Attention to Detail', 'Cross-domain Thinking']
   },
   {
     title: 'Consultant',
@@ -85,9 +100,10 @@ export const experience = [
     location: 'Champaign, IL',
     period: 'Jan 2025 - May 2025',
     summary:
-      'Designed a data-driven outreach strategy that increased candidate engagement by 25% and helped improve talent acquisition efficiency by 20%, balancing structured analysis with client-facing recommendations and collaborative execution across the consulting team.',
-    techStack: ['Excel', 'Market Research', 'Candidate Analytics', 'Reporting'],
-    softSkills: ['Client Communication', 'Teamwork', 'Strategic Thinking']
+      'Worked closely with cross-functional teams to analyze recruitment data for a financial services client, identifying where outreach was falling short and what could be done differently. Translated those findings into a data-driven marketing strategy that meaningfully improved how the client reached potential candidates. Led stakeholder interviews and synthesized survey responses into structured reports and content recommendations that directly shaped the clients talent acquisition approach.',
+    techStack: ['Excel', 'Google Forms'],
+    technicalSkills: ['Survey Analysis', 'Market Research', 'Data Interpretation', 'Strategy Reporting'],
+    softSkills: ['Stakeholder Management', 'Strategic Thinking', 'Research', 'Communication']
   },
   {
     title: 'Data Analyst Intern',
@@ -95,8 +111,9 @@ export const experience = [
     location: 'Mumbai, MH',
     period: 'Jan 2024 - Jun 2024',
     summary:
-      'Processed and cleaned more than 20,000 customer profiles to improve data quality by 40%, built customer segmentation models that achieved a 0.78 silhouette score, and delivered over 10 Power BI dashboards that contributed to a 15% increase in policy adoption.',
-    techStack: ['Power BI', 'Python', 'Data Cleaning', 'Segmentation', 'Dashboarding'],
-    softSkills: ['Storytelling', 'Analytical Thinking', 'Cross-functional Collaboration']
+      'Worked with large volumes of raw customer and policy data, cleaning and standardizing it from the ground up to make it reliable for analysis. Dug into the data to uncover behavioral patterns through clustering, turning those segments into actionable product recommendations for the business. Built dashboards and automated reporting workflows that replaced manual processes, giving product and marketing teams a clearer, real-time view of performance.',
+    techStack: ['SQL', 'Power BI', 'Python', 'Excel', 'Snowflake', 'Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn'],
+    technicalSkills: ['Customer Segmentation', 'Dashboard Automation', 'Data Cleaning', 'Clustering'],
+    softSkills: ['Data Storytelling', 'Business Acumen', 'Cross-functional Communication', 'Analytical Thinking']
   }
 ];

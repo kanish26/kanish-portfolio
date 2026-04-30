@@ -8,7 +8,7 @@ export default function Projects() {
     <section 
       id="projects" 
       style={{
-        padding: '128px 24px',
+        padding: '96px 24px',
         backgroundColor: '#ffffff',
       }}
     >
@@ -21,7 +21,7 @@ export default function Projects() {
           viewport={{ once: true }}
           style={{
             textAlign: 'center',
-            marginBottom: '80px',
+            marginBottom: '56px',
           }}
         >
           <span style={{
@@ -61,7 +61,7 @@ export default function Projects() {
         {/* Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
           gap: '32px',
         }}>
           {projects.map((project, index) => (

@@ -1,14 +1,14 @@
 'use client'
 import { motion } from 'framer-motion'
 import { experience } from '@/data/projects'
-import { MapPin, Calendar, Cpu, Users } from 'lucide-react'
+import { MapPin, Calendar, Cpu, Wrench, Users } from 'lucide-react'
 
 export default function Experience() {
   return (
     <section 
       id="experience" 
       style={{
-        padding: '128px 24px',
+        padding: '96px 24px',
         backgroundColor: '#f9fafb',
       }}
     >
@@ -19,7 +19,7 @@ export default function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          style={{ textAlign: 'center', marginBottom: '80px' }}
+          style={{ textAlign: 'center', marginBottom: '56px' }}
         >
           <span style={{
             display: 'inline-block',
@@ -118,6 +118,7 @@ export default function Experience() {
                     fontSize: '20px',
                     fontWeight: 'bold',
                     marginBottom: '4px',
+                    color: '#0066ff',
                   }}>
                     {job.title}
                   </h3>
@@ -162,7 +163,7 @@ export default function Experience() {
 
                 <div style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
                   gap: '20px',
                 }}>
                   <div>
@@ -190,6 +191,39 @@ export default function Experience() {
                             fontSize: '12px',
                             fontWeight: '600',
                             border: '1px solid #bfdbfe',
+                          }}
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      marginBottom: '12px',
+                      color: '#0f0f0f',
+                      fontWeight: '700',
+                      fontSize: '14px',
+                    }}>
+                      <Wrench size={16} color="#0f766e" />
+                      Technical Skills
+                    </div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                      {job.technicalSkills.map((item) => (
+                        <span
+                          key={item}
+                          style={{
+                            padding: '6px 10px',
+                            borderRadius: '999px',
+                            backgroundColor: '#ecfdf5',
+                            color: '#0f766e',
+                            fontSize: '12px',
+                            fontWeight: '600',
+                            border: '1px solid #a7f3d0',
                           }}
                         >
                           {item}

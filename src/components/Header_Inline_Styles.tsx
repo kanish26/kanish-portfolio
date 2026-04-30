@@ -9,6 +9,7 @@ const navItems = [
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
   { name: 'Skills', href: '#skills' },
+  { name: 'Beyond', href: '#beyond-data' },
   { name: 'Contact', href: '#contact' },
 ]
 
@@ -46,7 +47,9 @@ export default function Header() {
         margin: '0 auto',
         padding: '20px 24px',
         display: 'flex',
-        alignItems: 'center',
+        alignItems: isMobile ? 'flex-start' : 'center',
+        flexDirection: isMobile ? 'column' : 'row',
+        gap: isMobile ? '14px' : '0',
         justifyContent: 'space-between',
       }}>
         {/* Logo */}
@@ -88,11 +91,11 @@ export default function Header() {
           </div>
         )}
 
-        {/* Social Links - Desktop Only */}
+        {/* Social Links */}
         {!isMobile && (
           <div style={{ display: 'flex', gap: '16px' }}>
             <a 
-              href="https://github.com/kanishgodani" 
+              href="https://github.com/kanish26" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{
@@ -148,10 +151,71 @@ export default function Header() {
           </div>
         )}
 
-        {/* Mobile - Just Logo (simplified) */}
         {isMobile && (
-          <div style={{ fontSize: '12px', color: '#666' }}>
-            Menu
+          <div style={{ display: 'grid', gap: '12px', width: '100%' }}>
+            <div style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '14px 18px',
+              alignItems: 'center',
+            }}>
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  style={{
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#666',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <a 
+                href="https://github.com/kanish26" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  padding: '9px 12px',
+                  borderRadius: '8px',
+                  backgroundColor: '#f0f4ff',
+                  color: '#0066ff',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontSize: '13px',
+                  fontWeight: '600',
+                }}
+              >
+                <GitFork size={18} />
+                GitHub
+              </a>
+              <a 
+                href="https://linkedin.com/in/kanish-godani" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  padding: '9px 12px',
+                  borderRadius: '8px',
+                  backgroundColor: '#f0f4ff',
+                  color: '#0066ff',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontSize: '13px',
+                  fontWeight: '600',
+                }}
+              >
+                <Briefcase size={18} />
+                LinkedIn
+              </a>
+            </div>
           </div>
         )}
       </nav>

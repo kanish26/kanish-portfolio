@@ -7,7 +7,7 @@ export default function Contact() {
     <section 
       id="contact" 
       style={{
-        padding: '128px 24px',
+        padding: '96px 24px',
         background: 'linear-gradient(to bottom, #f9fafb, white)',
       }}
     >
@@ -181,7 +181,7 @@ export default function Contact() {
             <motion.a
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
-              href="https://github.com/kanishgodani"
+              href="https://github.com/kanish26"
               target="_blank"
               rel="noopener noreferrer"
               style={{

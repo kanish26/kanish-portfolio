@@ -2,21 +2,21 @@ import Link from 'next/link'
 import { ArrowLeft, Bot, Brain, Code2, ExternalLink, Sparkles, Wrench } from 'lucide-react'
 
 const aiProject = {
-  title: 'AI Research Assistant for Portfolio Knowledge Discovery',
-  intro: 'A conversational assistant concept designed to turn project notes, resume content, and experience highlights into a fast, structured Q&A surface for recruiters and collaborators.',
+  title: 'Vibes Recipe - AI Recipe Recommendation App',
+  intro: 'A semantic search and LLM-powered recommendation system that finds recipes based on what you are in the mood for, not just what\'s in your pantry.',
   workDone:
-    'Built the project concept around retrieval-driven question answering so a visitor can ask about work experience, project outcomes, or technical strengths and get grounded, human-readable answers. The flow combines document chunking, semantic retrieval, prompt orchestration, and response formatting to keep answers useful while still sounding natural and concise.',
+    'Built a RAG-based recipe recommendation system that understands natural language queries to surface recipes matching a specific mood or vibe. The flow combines data ingestion, embedding generation, vector similarity search, and LLM-powered response generation to deliver recommendations that feel relevant and fast.',
   result:
-    'The result is a portfolio-ready AI experience that can shorten the distance between curiosity and clarity. Instead of browsing multiple sections, someone can ask direct questions like what models were used, what business impact a project had, or which tools were strongest, and receive a focused answer in seconds.',
-  techStack: ['Next.js', 'TypeScript', 'Vector Search', 'Prompt Engineering', 'RAG Pipeline'],
-  models: ['GPT-4.1 / GPT-5 class reasoning model', 'Text Embeddings model'],
+    'Improved recommendation relevance by 75% while keeping query latency under 3 seconds, turning an open-ended "what should I cook" question into a focused, personalized answer.',
+  techStack: ['Python', 'FastAPI', 'Sentence Transformers', 'pgvector', 'PostgreSQL', 'RAG Pipeline'],
+  models: ['Sentence-Transformers (384-dim Embeddings)', 'Groq LLM', 'Cerebras LLM'],
   learned: [
-    'How to design retrieval flows that prioritize grounded answers over generic AI output.',
-    'How prompt structure changes tone, factual consistency, and answer usefulness.',
-    'How AI features need product thinking, not just model integration, to feel trustworthy.'
+    'How to build embedding pipelines that scale across large, messy real-world datasets.',
+    'How post-retrieval filtering meaningfully improves the quality of LLM-generated recommendations.',
+    'How choosing the right vector search strategy directly impacts both relevance and response speed.'
   ],
-  codeUrl: 'https://github.com/kanishgodani',
-  demoUrl: 'https://github.com/kanishgodani'
+  codeUrl: 'https://github.com/kanish26/Recipe-app',
+  demoUrl: 'https://github.com/kanish26'
 }
 
 function SectionLabel({
@@ -77,7 +77,7 @@ export default function AIPage() {
 
       <section style={{ padding: '24px 24px 96px' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ marginBottom: '48px', maxWidth: '900px' }}>
+          <div style={{ marginBottom: '48px', width: '100%' }}>
             <div
               style={{
                 display: 'inline-flex',
@@ -119,7 +119,7 @@ export default function AIPage() {
                 fontSize: '18px',
                 lineHeight: '1.8',
                 color: '#556070',
-                maxWidth: '820px',
+                width: '100%',
               }}
             >
               This page highlights the AI-focused side of my work: building systems that combine models,
@@ -143,7 +143,7 @@ export default function AIPage() {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'minmax(220px, 280px) minmax(0, 1fr)',
+                gridTemplateColumns: 'minmax(320px, 380px) minmax(0, 1fr)',
               }}
             >
               <div
@@ -175,10 +175,29 @@ export default function AIPage() {
                     <Sparkles size={14} />
                     AI Project
                   </div>
-                  <h2 style={{ margin: 0, fontSize: '30px', lineHeight: '1.12' }}>{aiProject.title}</h2>
+                  <h2
+                    style={{
+                      margin: 0,
+                      fontSize: '30px',
+                      lineHeight: '1.12',
+                      overflowWrap: 'anywhere',
+                      wordBreak: 'break-word',
+                    }}
+                  >
+                    {aiProject.title}
+                  </h2>
                 </div>
 
-                <p style={{ margin: 0, color: '#cbd5e1', lineHeight: '1.8', fontSize: '15px' }}>
+                <p
+                  style={{
+                    margin: 0,
+                    color: '#cbd5e1',
+                    lineHeight: '1.8',
+                    fontSize: '15px',
+                    overflowWrap: 'anywhere',
+                    wordBreak: 'break-word',
+                  }}
+                >
                   {aiProject.intro}
                 </p>
 

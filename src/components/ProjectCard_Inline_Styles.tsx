@@ -9,6 +9,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
+  const highlightsSummary = project.highlights.join(' ')
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -76,16 +78,15 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       </p>
 
       {/* Highlights */}
-      <div style={{ marginBottom: '16px' }}>
-        {project.highlights.slice(0, 2).map((highlight, i) => (
-          <div key={i} style={{ display: 'flex', gap: '10px', marginBottom: '8px', alignItems: 'flex-start' }}>
-            <span style={{ color: '#0066ff', fontWeight: 'bold', fontSize: '14px', marginTop: '2px' }}>›</span>
-            <span style={{ color: '#555', fontSize: '13px', lineHeight: '1.4' }}>
-              {highlight}
-            </span>
-          </div>
-        ))}
-      </div>
+      <p style={{
+        marginBottom: '16px',
+        color: '#555',
+        fontSize: '13px',
+        lineHeight: '1.6',
+        minHeight: '42px',
+      }}>
+        {highlightsSummary}
+      </p>
 
       {/* Tech Stack */}
       <div style={{
@@ -133,7 +134,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           <Code size={15} />
           Code
         </a>
-        {project.liveUrl && (
+        {index === 0 && project.liveUrl && (
           <a
             href={project.liveUrl}
             target="_blank"
