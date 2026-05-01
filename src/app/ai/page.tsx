@@ -16,7 +16,7 @@ const aiProject = {
     'How choosing the right vector search strategy directly impacts both relevance and response speed.'
   ],
   codeUrl: 'https://github.com/kanish26/Recipe-app',
-  demoUrl: 'https://github.com/kanish26'
+  demoUrl: 'https://ai-recipe-vibes-app.vercel.app/'
 }
 
 function SectionLabel({

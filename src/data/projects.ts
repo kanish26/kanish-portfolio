@@ -17,7 +17,7 @@ export const projects: Project[] = [
     description: 'Built an AI-powered recipe recommendation app that understands what you\'re in the mood for — not just what ingredients you have. Combines semantic search with LLM generation to surface recipes that actually match the vibe you\'re going for.',
     techStack: ['Python', 'Sentence-Transformer', 'pgvector', 'FastAPI', 'Groq', 'Cerebras', 'RAG', 'PostgreSQL'],
     githubUrl: 'https://github.com/kanish26/Recipe-app',
-    liveUrl: 'https://github.com/kanish26',
+    liveUrl: 'https://ai-recipe-vibes-app.vercel.app/',
     imageUrl: '/images/projects/retail-demand.png',
     highlights: [
       'Result: Improved recommendation relevance by 75% while keeping query response under 3 seconds.'
