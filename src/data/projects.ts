@@ -76,7 +76,7 @@ export const experience = [
     title: 'Data Science Analyst Intern',
     company: 'Second Wind Pro',
     location: 'New York, NY',
-    period: 'Jan 2026 - Present | Jun 2025 - Aug 2025',
+    period: 'Jan 2026 - May 2026 | Jun 2025 - Aug 2025',
     summary:
       'Worked on building a data pipeline to clean and validate thousands of NFL and college player records, ensuring the data was reliable enough to build on. Used that foundation to engineer meaningful features that bridge college performance to NFL potential, helping the model understand what actually translates across levels. Built and validated a regression model to predict player contract values, with interpretability layers added so stakeholders could understand not just the predictions, but the reasoning behind them.',
     techStack: ['Python', 'XGBoost Regressor', 'Pandas', 'NumPy', 'Scikit-learn', 'SHAP'],
