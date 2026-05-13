@@ -73,7 +73,7 @@ export const skills = {
 
 export const experience = [
   {
-    title: 'Data Science Analyst Intern',
+    title: 'Data Science Intern',
     company: 'Second Wind Pro',
     location: 'New York, NY',
     period: 'Jan 2026 - May 2026 | Jun 2025 - Aug 2025',
