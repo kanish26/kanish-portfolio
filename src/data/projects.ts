@@ -7,7 +7,7 @@ export interface Project {
   liveUrl?: string;
   imageUrl: string;
   highlights: string[];
-  category: 'data-science' | 'analytics' | 'engineering';
+  category: 'data-science' | 'analytics' | 'ai & ml';
 }
 
 export const projects: Project[] = [
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     highlights: [
       'Result: Improved recommendation relevance by 75% while keeping query response under 3 seconds.'
     ],
-    category: 'engineering'
+    category: 'ai & ml'
   },
   {
     id: 'electricity-forecasting',
