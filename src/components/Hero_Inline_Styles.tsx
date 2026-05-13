@@ -281,7 +281,7 @@ export default function Hero() {
                 }}
               >
                 <a
-                  href="/Kanish_Godani_Resume.pdf"
+                  href="/Users/kanishgodani/Codes/kanish-portfolio-2/public/Kanish_Godani_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -308,7 +308,7 @@ export default function Hero() {
                 </a>
                 <div style={{ width: '1px', backgroundColor: 'rgba(255,255,255,0.22)' }} />
                 <a
-                  href="/Kanish_Godani_Resume.pdf"
+                  href="/Users/kanishgodani/Codes/kanish-portfolio-2/public/Kanish_Godani_Resume.pdf"
                   download
                   style={{
                     padding: '13px 18px',
