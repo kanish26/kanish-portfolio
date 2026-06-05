@@ -15,7 +15,7 @@ export const projects: Project[] = [
     id: 'rag-project', 
     title: 'Vibes Recipe - AI Recipe Recommendation App',
     description: 'Built an AI-powered recipe recommendation app that understands what you\'re in the mood for — not just what ingredients you have. Combines semantic search with LLM generation to surface recipes that actually match the vibe you\'re going for.',
-    techStack: ['Python', 'Sentence-Transformer', 'pgvector', 'FastAPI', 'Groq', 'Cerebras', 'RAG', 'PostgreSQL'],
+    techStack: ['Python', 'Sentence-Transformer', 'pgvector', 'FastAPI', 'Groq', 'Cerebras', 'RAG', 'PostgreSQL', 'Claude Code (Opus 4.7)'],
     githubUrl: 'https://github.com/kanish26/Recipe-app',
     liveUrl: 'https://ai-recipe-vibes-app.vercel.app/',
     imageUrl: '/images/projects/retail-demand.png',
