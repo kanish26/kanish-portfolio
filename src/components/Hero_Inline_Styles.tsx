@@ -390,7 +390,7 @@ export default function Hero() {
                 lineHeight: '1.64',
               }}
             >
-              I&apos;m a graduate student at the University of Illinois Urbana-Champaign, pursuing a Master&apos;s in Information Management with a perfect 4.0 GPA. My passion lies in working with complex data to uncover what truly matters and make it useful for the real world.
+              Graduated with a Master of Science in Information Management from the University of Illinois Urbana-Champaign, achieving a perfect 4.0 GPA. My passion lies in working with complex data to uncover what truly matters and make it useful for the real world.
             </p>
             <p
               style={{

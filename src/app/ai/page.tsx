@@ -9,7 +9,7 @@ const aiProject = {
   result:
     'Improved recommendation relevance by 75% while keeping query latency under 3 seconds, turning an open-ended "what should I cook" question into a focused, personalized answer.',
   techStack: ['Python', 'FastAPI', 'Sentence Transformers', 'pgvector', 'PostgreSQL', 'RAG Pipeline'],
-  models: ['Sentence-Transformers (384-dim Embeddings)', 'Groq LLM', 'Cerebras LLM'],
+  models: ['Sentence-Transformers (384-dim Embeddings)', 'Groq LLM', 'Cerebras LLM', 'Claude Code (Opus 4.7)'],
   learned: [
     'How to build embedding pipelines that scale across large, messy real-world datasets.',
     'How post-retrieval filtering meaningfully improves the quality of LLM-generated recommendations.',
